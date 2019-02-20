@@ -7,6 +7,8 @@ import android.content.Context;
  */
 public interface ILogger {
 
+    void init(Context context);
+
     void v(String tag, String log);
 
     void i(String tag, String log);

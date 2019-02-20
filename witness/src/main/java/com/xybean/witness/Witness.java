@@ -15,11 +15,12 @@ public final class Witness {
 
     private static ILogger loggerDelegate = new DefaultLogger();
 
-    public static void init(ILogger logger) {
+    public static void init(Context context, ILogger logger) {
         if (logger == null) {
-            loggerDelegate = new DefaultLogger();
+            logger = new DefaultLogger();
         }
         loggerDelegate = logger;
+        loggerDelegate.init(context);
     }
 
     public static void v(LogModel model) {

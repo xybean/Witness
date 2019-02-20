@@ -1,4 +1,4 @@
-package com.xybean.witness.demo;
+package com.xybean.witness.demo.model;
 
 import com.xybean.witness.model.JsonModel;
 

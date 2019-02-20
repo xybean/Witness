@@ -9,6 +9,11 @@ import android.util.Log;
 public class DefaultLogger implements ILogger {
 
     @Override
+    public void init(Context context) {
+        // do nothing
+    }
+
+    @Override
     public void v(String tag, String log) {
         Log.v(tag, log);
     }

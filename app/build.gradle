@@ -12,11 +12,11 @@ android {
     buildTypes {
 
         debug {
-            resValue("string","bugly_key","${BUGLY_KEY}")
+            resValue("string","bugly_app_id","${BUGLY_APP_ID}")
         }
 
         release {
-            resValue("string","bugly_key","${BUGLY_KEY}")
+            resValue("string","bugly_app_id","${BUGLY_APP_ID}")
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
