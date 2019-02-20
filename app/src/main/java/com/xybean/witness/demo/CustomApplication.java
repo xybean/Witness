@@ -12,6 +12,6 @@ public class CustomApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        CrashReport.initCrashReport(getApplicationContext(), "", false);
+        CrashReport.initCrashReport(getApplicationContext(), getResources().getString(R.string.bugly_key), false);
     }
 }
