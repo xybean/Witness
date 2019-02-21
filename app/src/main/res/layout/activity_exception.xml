@@ -5,24 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ExceptionActivity">
 
     <Button
-        android:id="@+id/btn_test"
+        android:id="@+id/btn_exp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="test"/>
+        android:text="exception"/>
 
     <Button
         android:id="@+id/btn_post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="post"/>
-
-    <Button
-        android:id="@+id/btn_exp_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="exception test"/>
 
 </LinearLayout>

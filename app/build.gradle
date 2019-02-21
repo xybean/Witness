@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 
+apply plugin: 'com.hujiang.android-aspectjx'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -12,15 +14,19 @@ android {
     buildTypes {
 
         debug {
-            resValue("string","bugly_app_id","${BUGLY_APP_ID}")
+            resValue("string", "bugly_app_id", "${BUGLY_APP_ID}")
         }
 
         release {
-            resValue("string","bugly_app_id","${BUGLY_APP_ID}")
+            resValue("string", "bugly_app_id", "${BUGLY_APP_ID}")
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+}
+
+aspectjx {
+    include "com.xybean.witness.demo"
 }
 
 dependencies {

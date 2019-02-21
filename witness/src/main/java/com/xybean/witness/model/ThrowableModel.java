@@ -9,22 +9,22 @@ import java.util.Set;
 /**
  * Author @xybean on 2019/1/10.
  *
- * @see Exception#printStackTrace()
+ * @see Throwable#printStackTrace()
  */
-public class ExceptionModel implements LogModel {
+public class ThrowableModel implements LogModel {
 
     private static final String CAUSE_CAPTION = "Caused by: ";
     private static final String SUPPRESSED_CAPTION = "Suppressed: ";
 
-    private static final String TAG = "EXCEPTION";
+    private static final String TAG = "THROWABLE";
 
-    private Exception e;
+    private Throwable e;
 
-    public static LogModel create(Exception e) {
-        return new ExceptionModel(e);
+    public static LogModel create(Throwable e) {
+        return new ThrowableModel(e);
     }
 
-    private ExceptionModel(Exception e) {
+    private ThrowableModel(Throwable e) {
         this.e = e;
     }
 
@@ -36,7 +36,8 @@ public class ExceptionModel implements LogModel {
                 Collections.newSetFromMap(new IdentityHashMap<Throwable, Boolean>());
         dejaVu.add(e);
 
-        sb.append(this);
+        sb.append(e.getClass().getCanonicalName());
+        sb.append("\n");
         StackTraceElement[] trace = e.getStackTrace();
         for (StackTraceElement traceElement : trace) {
             sb.append("\tat ").append(traceElement).append("\n");
