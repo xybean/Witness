@@ -25,4 +25,6 @@ public interface ILogger {
 
     void removeExt(Context context, String key);
 
+    void clearAllExt(Context context);
+
 }

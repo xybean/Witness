@@ -52,4 +52,9 @@ public class DefaultLogger implements ILogger {
     public void removeExt(Context context, String key) {
         // do nothing
     }
+
+    @Override
+    public void clearAllExt(Context context) {
+        // do nothing
+    }
 }

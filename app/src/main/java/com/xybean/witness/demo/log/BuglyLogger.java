@@ -55,4 +55,11 @@ public class BuglyLogger implements ILogger {
     public void removeExt(Context context, String key) {
         CrashReport.removeUserData(context, key);
     }
+
+    @Override
+    public void clearAllExt(Context context) {
+        for (String key : CrashReport.getAllUserDataKeys(context)) {
+            CrashReport.removeUserData(context, key);
+        }
+    }
 }
