@@ -15,17 +15,10 @@ public class MainActivity extends AppCompatActivity {
 
         Witness.addExt(this, "UserId", "11111");
 
-        findViewById(R.id.btn_test).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_post_test).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Witness.d("hello_tag", "hello world!");
-            }
-        });
-
-        findViewById(R.id.btn_post).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Witness.postLog(true);
+                Router.startActivity(MainActivity.this, LogPostActivity.class);
             }
         });
 

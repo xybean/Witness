@@ -85,6 +85,10 @@ public final class Witness {
         }
     }
 
+    public static void postLog() {
+        postLog(true);
+    }
+
     public static void addExt(Context context, String key, String value) {
         loggerDelegate.addExt(context, key, value);
     }

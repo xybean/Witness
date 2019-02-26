@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".LogPostActivity">
 
     <Button
-        android:id="@+id/btn_post_test"
+        android:id="@+id/btn_log"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="post test"/>
+        android:text="print log"/>
 
     <Button
-        android:id="@+id/btn_exp_test"
+        android:id="@+id/btn_post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="exception test"/>
+        android:text="post log"/>
 
 </LinearLayout>
