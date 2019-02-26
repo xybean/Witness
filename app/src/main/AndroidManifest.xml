@@ -16,6 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".StrictModeActivity">
+        </activity>
         <activity android:name=".LogPostActivity">
         </activity>
         <activity android:name=".ExceptionActivity">

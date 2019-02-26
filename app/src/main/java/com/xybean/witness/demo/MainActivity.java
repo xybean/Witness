@@ -29,5 +29,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.btn_strict_test).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Router.startActivity(MainActivity.this, StrictModeActivity.class);
+            }
+        });
+
     }
 }
